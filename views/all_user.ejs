@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All User</title>
+</head>
+<body>
+    <div class="outercontainer">
+    <div id="newUser">
+        <a href="/addUser">Add User</a>
+    </div>
+    <div id="data">
+     
+<table>
+    <thead>
+     <tr>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Edit</td>
+        <td>Delete</td>
+     </tr>
+    </thead>
+    <%users.forEach(user=>{%>
+    <tr>
+        <td><%=user.name%></td>
+        <td><%=user.email%></td>
+        <td><a href="/updateUser">Edite</a></td>
+        <td><a href="#">Delete</a></td>
+    </tr>
+    <%})%>
+    <tbody>
+
+    </tbody>
+</table>
+
+    </div>
+</div>
+</body>
+</html>
